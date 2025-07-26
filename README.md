@@ -1,4 +1,4 @@
-# CyberMyke
+# Michael Okorocha
 
 ## PROJECTS
 ### Project 1
