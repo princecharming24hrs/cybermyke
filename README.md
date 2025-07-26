@@ -1,4 +1,4 @@
-# cybermyke
+# CyberMyke
 
 ## PROJECTS
 ### Project 1
