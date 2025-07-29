@@ -1,6 +1,24 @@
-# Michael Okorocha
+## Catnork – Designing a Secure Internal Network for Improved Operational Efficiency 
 
-## PROJECTS
+### **Business Focus -**
+Network Design & Security
+### **Endnodes or Hardware components required-** 
+- Cisco Router 2811
+
+- 2 Cisco Switches for HR Dept & IT Dept
+
+- 1 DNS Server 
+
+- 1 DHCP Server
+
+- 1 Web Server
+
+- Laptops and computers for the staff 
+
+
+
+
+
 ### SETTING A NETWORK INFRASTRUCTURE, SOLVING INTERNET ACCESS AND BANDWIDTH MANAGEMENT 
 - Description - SITUATION
   A law firm wanted to resolve slow internet service and manage slow service for all its staff
@@ -24,3 +42,7 @@
 - Description
 - Links 
 - 
+
+
+Specialization: Network Design & Security Business Focus: Tech Infrastructure for High-Growth Startups
+Tool: Packet Trace
