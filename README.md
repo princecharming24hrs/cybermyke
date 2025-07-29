@@ -2,25 +2,33 @@
 
 ### **Business Focus -**
 Network Design & Security
-### **Endnodes or Hardware components required-** 
+### **End nodes or Hardware components required-** 
 - Cisco Router 2811
-
+- CAT 6 cables
 - 2 Cisco Switches for HR Dept & IT Dept
-
 - 1 DNS Server 
-
 - 1 DHCP Server
-
 - 1 Web Server
-
 - Laptops and computers for the staff 
 
 
+### SETTING A NETWORK INFRASTRUCTURE
+### ** Network Connection** 
+- Position all hardware components appropriately consideration safety and high availability and functionality 
+- Servers in designated server room
+- Switches in the appropriated position for each office / department that will enhance ease of cabling and connection for laptop and computers for staff
+- run network connection to all hardware components
 
+### ** Network Configuration** 
+Static IP Addresses will be assigned to all devices as follows 
 
+- CISCO ROUTER 
+- DHCP SERVER 
+- DNS SERVER 
+- WEB SERVER
+of course network switches don't need ip addresses as 
 
-### SETTING A NETWORK INFRASTRUCTURE, SOLVING INTERNET ACCESS AND BANDWIDTH MANAGEMENT 
-- Description - SITUATION
+- description - SITUATION
   A law firm wanted to resolve slow internet service and manage slow service for all its staff
 
 - EXPERIENCE
