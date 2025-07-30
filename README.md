@@ -31,6 +31,19 @@ of course network switches don't need ip addresses
 THE ROUTER is going to be the connecting device between the switches connecting different section or segment of the infrastructure serving each departments (offices) 
 See the diagram below 
 
+
+**ASSIGN IP ADDRESS** TO THE OTHER DEVICES ON THE FIRST SECTION OF THE OFFICE with the **192.168.1.0/24** ranges 
+thats is with the ip address ranging from **1 to 254** 
+that is   
+**192.168.1.1 - 192.168.1.254**   
+but we are reserving 1 to 9 for fixed ips to be used by servers and any dedicated devices  
+so we will use **192.168.1.10 - 192.168.1.254**  
+for any devices that will connect to the network  
+and   
+a subnet of **255.255.255.0 (/24)** 
+
+
+
 So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 with the network configuration below 
 
 | Device | LAN 1 |  LAN 2
@@ -42,10 +55,42 @@ So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 wi
 | DHCP  |  192.168.2.2  | 192.168.2.2
 | DNS  |  192.168.2.3  | 192.168.2.3
 
-	
+
+So with the settings above we begin the 
+
+##**ASSIGN IP ADDRESS CONFIGURATION OF ALL THE NETWORK DEVICES**
 
 
-- description - SITUATION
+CISCO ROUTER IP CONFIGURATION
+
+connect to the router 
+enter the command line Interface 
+and launch terminal
+ from the prompt enter the commands below step by step
+ 
+####### $> configure terminal or conf t  
+then Press Enter  
+$> enable  
+$> ip add  
+ 
+ 
+ 
+DHCP SERVER CONFIGURATION
+
+
+DNS SERVER CONFIGURATION
+
+
+WEB SERVER CONFIGURATION
+
+
+we didnt s
+
+ 
+ 
+
+
+- Description - SITUATION
   A law firm wanted to resolve slow internet service and manage slow service for all its staff
 
 - EXPERIENCE
@@ -53,8 +98,8 @@ So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 wi
 
 - APPROACH
   Step 1 Setup the Router with different ip routers for different departments 
-  step 2 setup a DHCP server that will access ip addresses and also setup different ip segments for different departments
-  setp 3 setup a web server  
+  Step 2 setup a DHCP server that will access ip addresses and also setup different ip segments for different departments
+  Step 3 setup a web server  
   setup access list for web server 
 
 - TACTICS
