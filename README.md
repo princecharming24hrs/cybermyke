@@ -14,23 +14,23 @@ Network Design & Security
 
 ### SETTING UP THE NETWORK INFRASTRUCTURE
 ### ** Network Connection** 
-- Position all hardware components appropriately consideration safety and high availability and functionality 
-- Servers in designated server room
-- Switches in the appropriated position for each office / department that will enhance ease of cabling and connection for laptop and computers for staff
-- run network connection to all hardware components
+- Identify and position all hardware components appropriately consideration safety and high availability and functionality 
+- **Servers** in designated server room
+- **Switches** in the appropriated position for each office / department that will enhance ease of cabling and connection for laptop and computers for staff
+- Run **cat 6 cable** for the network connection to all hardware components
 
 ### ** Network Configuration** 
-Static IP Addresses will be assigned to all devices as follows 
+**Static IP Addresses** will be assigned to the following devices: 
 
 - CISCO ROUTER 
 - DHCP SERVER 
 - DNS SERVER 
-- WEB SERVER
-of course network switches don't need ip addresses
+- WEB SERVER  
+
+**Note** Network switches don't need ip addresses
 
 THE ROUTER is going to be the connecting device between the switches connecting different section or segment of the infrastructure serving each departments (offices) 
 See the diagram below 
-
 
 **ASSIGN IP ADDRESS** TO THE OTHER DEVICES ON THE FIRST SECTION OF THE OFFICE with the **192.168.1.0/24** ranges 
 thats is with the ip address ranging from **1 to 254** 
@@ -42,8 +42,13 @@ for any devices that will connect to the network
 and   
 a subnet of **255.255.255.0 (/24)** 
 
+the **Gateway** device will be the CISCO ROUTER which we will assign **192.168.1.1** and **192.168.2.1**
+because internet access passess or routes through it 
 
+**DNS** resolves all devices or hosts on the network to a hostname and an ip address for easy discovery and location 
+it will be assign a fixed IP of **192.168.2.3**
 
+**DHCP** that is responsible to assign ip addresses to all hosts or devices on the network  
 So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 with the network configuration below 
 
 | Device | LAN 1 |  LAN 2
@@ -74,7 +79,15 @@ $> enable
 $> ip add  
  
  
+ Similarly 
  
+ 
+ | Device | IP ADDRESS | GATEWAY | SUBNET | DNS
+| ----- | --- |---| ---|
+| DHCP SERVER | 192.168.2.2 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
+| DNS SERVER | 192.168.2.3 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
+| WEB SERVER | 192.168.2.4 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
+
 DHCP SERVER CONFIGURATION
 
 
@@ -84,35 +97,3 @@ DNS SERVER CONFIGURATION
 WEB SERVER CONFIGURATION
 
 
-we didnt s
-
- 
- 
-
-
-- Description - SITUATION
-  A law firm wanted to resolve slow internet service and manage slow service for all its staff
-
-- EXPERIENCE
-  All the staff were experiencing slow internet service, their computers were having issues with connection to the office network, they also needed to have a setup where some departments can share documents and printer among them, they also wanted their web server to have some level of limitation on who can work on it 
-
-- APPROACH
-  Step 1 Setup the Router with different ip routers for different departments 
-  Step 2 setup a DHCP server that will access ip addresses and also setup different ip segments for different departments
-  Step 3 setup a web server  
-  setup access list for web server 
-
-- TACTICS
-- 
-
-- Links 
-- 
-
-### Project 2
-- Description
-- Links 
-- 
-
-
-Specialization: Network Design & Security Business Focus: Tech Infrastructure for High-Growth Startups
-Tool: Packet Trace
