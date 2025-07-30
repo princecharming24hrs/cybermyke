@@ -12,7 +12,7 @@ Network Design & Security
 - Laptops and computers for the staff 
 
 
-### SETTING A NETWORK INFRASTRUCTURE
+### SETTING UP THE NETWORK INFRASTRUCTURE
 ### ** Network Connection** 
 - Position all hardware components appropriately consideration safety and high availability and functionality 
 - Servers in designated server room
@@ -26,7 +26,24 @@ Static IP Addresses will be assigned to all devices as follows
 - DHCP SERVER 
 - DNS SERVER 
 - WEB SERVER
-of course network switches don't need ip addresses as 
+of course network switches don't need ip addresses
+
+THE ROUTER is going to be the connecting device between the switches connecting different section or segment of the infrastructure serving each departments (offices) 
+See the diagram below 
+
+So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 with the network configuration below 
+
+| Device | LAN 1 |  LAN 2
+| ----- | --- |---|
+| | | |
+| IP ADDRESS | 192.168.1.1 | 255.255.255.0 
+| SUBNET   |  255.255.255.0  | 255.255.255.0
+| GATEWAY  |  192.168.1.1  | 192.168.2.1
+| DHCP  |  192.168.2.2  | 192.168.2.2
+| DNS  |  192.168.2.3  | 192.168.2.3
+
+	
+
 
 - description - SITUATION
   A law firm wanted to resolve slow internet service and manage slow service for all its staff
