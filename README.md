@@ -71,8 +71,9 @@ So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 wi
 
 AS SHOWN BELOW 
 
+![
 https://github.com/princecharming24hrs/projects/blob/main/assets/CARTNOK%20NETWORK.png
-
+](assets/CARTNOK%20NETWORK.png)
 
 So with the settings above we begin the 
 
@@ -116,6 +117,8 @@ exit
 MAIN_ROUTER(config)#interface FastEthernet0/1  
 MAIN_ROUTER(config-if)#ip address 192.168.2.1 255.255.255.0
 MAIN_ROUTER(config-if)#
+ 
+ RESULT IS SHOW BELOW 
  
  
  
