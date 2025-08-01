@@ -195,11 +195,11 @@ Visit http://192.168.2.4  ✅ Allowed
 Other PCs	  
 Visit http://192.168.2.4	❌ Blocked
 ________________________________________
-Final Notes:
-•	Standard ACLs are simple but can’t filter by service/port.
-•	Extended ACLs are powerful  use them when you need precision.
-•	Always apply ACLs as close as possible to where they are effective:
-o	Standard ACL → apply close to the destination
+
+•	Standard ACLs are simple but can’t filter by service/port.  
+•	Extended ACLs are powerful  use them when you need precision.  
+•	Always apply ACLs as close as possible to where they are effective:  
+o	Standard ACL → apply close to the destination  
 o	Extended ACL → apply close to the source
 
 
