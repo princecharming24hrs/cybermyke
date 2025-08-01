@@ -91,31 +91,31 @@ and launch terminal
 then Press Enter  
 
 Router>  
-Router>enable  
+Router>*enable*  
 Router#  
-Router#configure terminal  
+Router#*configure terminal*  
 Enter configuration commands, one per line.  End with CNTL/Z.  
 Router(config-if)#  
 
 
 MAIN_ROUTER(config)#  
-ROUTER(config)#hostname MAIN_ROUTER  
+ROUTER(config)#*hostname MAIN_ROUTER*  
 MAIN_ROUTER(config)#  
-exit  
+*exit*  
 
 SET IP FOR THE LAN 1  
 
 exit  
-MAIN_ROUTER(config)#interface FastEthernet0/0  
-MAIN_ROUTER(config-if)#ip address 192.168.1.1 255.255.255.0  
+MAIN_ROUTER(config)#*interface FastEthernet0/0*  
+MAIN_ROUTER(config-if)#*ip address 192.168.1.1 255.255.255.0*  
 MAIN_ROUTER(config-if)#  
 
 
 SET IP FOR LAN 2
 
-exit
-MAIN_ROUTER(config)#interface FastEthernet0/1  
-MAIN_ROUTER(config-if)#ip address 192.168.2.1 255.255.255.0  
+*exit*
+MAIN_ROUTER(config)#*interface FastEthernet0/1*  
+MAIN_ROUTER(config-if)#*ip address 192.168.2.1 255.255.255.0*  
 MAIN_ROUTER(config-if)#
  
  RESULT IS SHOW BELOW 
