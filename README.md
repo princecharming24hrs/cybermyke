@@ -158,7 +158,7 @@ Standard ACL	1–99, 1300–1999	Source IP only
 Extended ACL	100–199, 2000–2699	Source IP, Destination IP, Protocol, Port
 
 **Scenario**  
-Only Laptop0 (IP: 192.168.1.25) should be able to access the Webserver (IP: 192.168.2.4) using HTTP. 
+Only Laptop0 (*IP: 192.168.1.25*) should be able to access the Webserver (*IP: 192.168.2.4*) using HTTP. 
 Everyone else should be blocked from the webserver, but still allowed to use other services like DHCP or DNS.
 ________________________________________
 ## **Step-by-Step Configuration**  
