@@ -69,7 +69,9 @@ So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 wi
 | DNS  |  192.168.2.3  | 192.168.2.3
 
 
+AS SHOWN BELOW 
 
+https://github.com/princecharming24hrs/projects/blob/main/assets/CARTNOK%20NETWORK.png
 
 
 So with the settings above we begin the 
