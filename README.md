@@ -152,9 +152,9 @@ MAIN_ROUTER(config-if)#
 ACL
 Now Let’s Configure an Extended ACL Using host
 
-•	Standard ACLs are simple but can’t filter by service/port.
-•	Extended ACLs are powerful — use them when you need precision.
-Standard ACL	1–99, 1300–1999	Source IP only
+•	Standard ACLs are simple but can’t filter by service/port.  
+•	Extended ACLs are powerful — use them when you need precision.  
+Standard ACL	1–99, 1300–1999	Source IP only  
 Extended ACL	100–199, 2000–2699	Source IP, Destination IP, Protocol, Port
 
 **Scenario**  
