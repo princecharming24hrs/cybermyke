@@ -201,6 +201,3 @@ ________________________________________
 •	Always apply ACLs as close as possible to where they are effective:  
 o	Standard ACL → apply close to the destination  
 o	Extended ACL → apply close to the source
-
-
-
