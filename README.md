@@ -60,13 +60,16 @@ it will be assign a fixed IP of **192.168.2.3**
 **DHCP** that is responsible to assign ip addresses to all hosts or devices on the network  
 So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 with the network configuration below 
 
-| Device | LAN 1 |  LAN 2
-| ----- | --- |---| ---|
+|  PORTS | LAN 1 |  LAN 2|
+| ----- | --- |---|
 | IP ADDRESS | 192.168.1.1 | 255.255.255.0 
 | SUBNET   |  255.255.255.0  | 255.255.255.0
 | GATEWAY  |  192.168.1.1  | 192.168.2.1
 | DHCP  |  192.168.2.2  | 192.168.2.2
 | DNS  |  192.168.2.3  | 192.168.2.3
+
+
+
 
 
 So with the settings above we begin the 
@@ -118,8 +121,8 @@ MAIN_ROUTER(config-if)#
  Similarly 
  we will use the configurations below for the DHCP. DNS AND WEB SERVERS too
  
- | Device | IP ADDRESS | GATEWAY | SUBNET | DNS
-| ----- | --- |---| ---|
+| Device | IP ADDRESS | GATEWAY | SUBNET | DNS |
+| ----- | --- |---| ---| ---|
 | DHCP SERVER | 192.168.2.2 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
 | DNS SERVER | 192.168.2.3 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
 | WEB SERVER | 192.168.2.4 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
