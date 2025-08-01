@@ -90,38 +90,39 @@ and launch terminal
 ####### $> configure terminal or conf t  
 then Press Enter  
 
-Router>
-Router>enable
-Router#
-Router#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
-Router(config-if)#
+Router>  
+Router>enable  
+Router#  
+Router#configure terminal  
+Enter configuration commands, one per line.  End with CNTL/Z.  
+Router(config-if)#  
 
 
-MAIN_ROUTER(config)#
-ROUTER(config)#hostname MAIN_ROUTER
-MAIN_ROUTER(config)#
-exit
+MAIN_ROUTER(config)#  
+ROUTER(config)#hostname MAIN_ROUTER  
+MAIN_ROUTER(config)#  
+exit  
 
-SET IP FOR THE LAN 1
+SET IP FOR THE LAN 1  
 
-exit
+exit  
 MAIN_ROUTER(config)#interface FastEthernet0/0  
-MAIN_ROUTER(config-if)#ip address 192.168.1.1 255.255.255.0
-MAIN_ROUTER(config-if)#
+MAIN_ROUTER(config-if)#ip address 192.168.1.1 255.255.255.0  
+MAIN_ROUTER(config-if)#  
 
 
 SET IP FOR LAN 2
 
 exit
 MAIN_ROUTER(config)#interface FastEthernet0/1  
-MAIN_ROUTER(config-if)#ip address 192.168.2.1 255.255.255.0
+MAIN_ROUTER(config-if)#ip address 192.168.2.1 255.255.255.0  
 MAIN_ROUTER(config-if)#
  
  RESULT IS SHOW BELOW 
  
- 
- 
+ ![R O U T E R](assets/ROUTER.png)
+
+ ________________________________________
  
  Similarly 
  we will use the configurations below for the DHCP. DNS AND WEB SERVERS too
@@ -133,24 +134,17 @@ MAIN_ROUTER(config-if)#
 | WEB SERVER | 192.168.2.4 | 192.168.2.1| 255.255.255.0| 192.168.2.3|  
 
 
-Assigning IP for 
-DHCP SERVER CONFIGURATION
- Power up the dchp and login to the machine via ssh terminal 
- you can use putty client or Zutty from your kali linux or parrot OS 
+### Assigning IP for 
+### DHCP SERVER CONFIGURATION
 
-then use the command as follow
+![DHCP Server setting](assets/DHCP%20Server%20setting.png)
 
-switch> enable
-switch# conf t 
-switch(config)#interface FastEthernet0/1  
-MAIN_ROUTER(config-if)#ip address 192.168.2.2 255.255.255.0
-MAIN_ROUTER(config-if)# ip dns 192.168.2.3  
+### DNS SERVER CONFIGURATION
+![DNS SERVER](assets/DNS%20SERVER.png)
 
+### WEB SERVER CONFIGURATION
 
-DNS SERVER CONFIGURATION
-
-
-WEB SERVER CONFIGURATION
+![WEB SERVER](assets/WEB%20SERVER.png)
 
 
 ### SETTING UP THE ACCESS CONTROL ON THE ROUTER ### 
@@ -163,34 +157,43 @@ Now Let’s Configure an Extended ACL Using host
 Standard ACL	1–99, 1300–1999	Source IP only
 Extended ACL	100–199, 2000–2699	Source IP, Destination IP, Protocol, Port
 
-Scenario
-Only Laptop0 (IP: 192.168.1.25) should be able to access the Webserver (IP: 192.168.2.4) using HTTP. Everyone else should be blocked from the webserver, but still allowed to use other services like DHCP or DNS.
+**Scenario**  
+Only Laptop0 (IP: 192.168.1.25) should be able to access the Webserver (IP: 192.168.2.4) using HTTP. 
+Everyone else should be blocked from the webserver, but still allowed to use other services like DHCP or DNS.
 ________________________________________
-Step-by-Step Configuration
-Step 1: Enter Router CLI
-enable
-configure terminal
-Step 2: Create ACL Using host
-access-list 100 permit tcp host 192.168.1.25 host 192.168.2.4 eq 80
-access-list 100 deny tcp any host 192.168.2.4 eq 80
-access-list 100 permit ip any any
-🔎 Explanation:
-•	permit tcp host 192.168.1.25 host 192.168.2.4 eq 80: Allow HTTP traffic from Laptop0 to Webserver
-•	deny tcp any host 192.168.2.4 eq 80: Block HTTP from all other devices to Webserver
-•	permit ip any any: Allow all other traffic (DHCP, DNS, ping, etc.)
+## **Step-by-Step Configuration**  
+
+**Step 1:** Enter Router CLI
+*enable*  
+*configure terminal*  
+
+**Step 2:** Create ACL Using host  
+*access-list 100 permit tcp host 192.168.1.25 host 192.168.2.4 eq 80*  
+*access-list 100 deny tcp any host 192.168.2.4 eq 80*  
+*access-list 100 permit ip any any*  
+
+**🔎 Explanation:**  
+•	permit tcp host 192.168.1.25 host 192.168.2.4 eq 80:   
+Allow HTTP traffic from Laptop0 to Webserver  
+•	deny tcp any host 192.168.2.4 eq 80: Block HTTP from all other devices to Webserver  
+•	permit ip any any: Allow all other traffic (DHCP, DNS, ping, etc.)  
 ________________________________________
-Step 3: Apply the ACL to the Correct Interface
-If the Webserver is connected to interface GigabitEthernet0/1:
-interface Fa0/1
-ip access-group 100 out
-exit
+## **Step 3:**   
+Apply the ACL to the Correct Interface
+If the Webserver is connected to interface *GigabitEthernet0/1:*  
+*interface Fa0/1*  
+*ip access-group 100 out***
+*exit*  
+
 This tells the router: "Before traffic goes to the webserver, apply ACL 100."
 ________________________________________
-Step 4: Confirm & Test
+## **Step 4: Confirm & Test**  
 Test in browser:
 Device	Action	Result
-Laptop0	Visit http://192.168.2.4	✅ Allowed
-Other PCs	Visit http://192.168.2.4	❌ Blocked
+Laptop0  	
+Visit http://192.168.2.4  ✅ Allowed
+Other PCs	  
+Visit http://192.168.2.4	❌ Blocked
 ________________________________________
 Final Notes:
 •	Standard ACLs are simple but can’t filter by service/port.
