@@ -61,7 +61,7 @@ it will be assign a fixed IP of **192.168.2.3**
 So the cisco router  will have 2 LAN ports to link the 2 switches LAN1 & LAN2 with the network configuration below 
 
 | Device | LAN 1 |  LAN 2
-| ----- | --- |---|
+| ----- | --- |---| ---|
 | IP ADDRESS | 192.168.1.1 | 255.255.255.0 
 | SUBNET   |  255.255.255.0  | 255.255.255.0
 | GATEWAY  |  192.168.1.1  | 192.168.2.1
