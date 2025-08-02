@@ -1,4 +1,5 @@
-### PROJECT 001 Catnork NETWORK  – Designing a Secure Internal Network for Improved Operational Efficiency 
+### PROJECT 001 - ### 
+### **CATNIRK NETWORK  – Designing a Secure Internal Network for Improved Operational Efficiency** ### 
 
 ### **Project Objective**
 - Design and build a functioning organizational network using a router, switches, PCs, and servers
